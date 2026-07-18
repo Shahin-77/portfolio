@@ -1,0 +1,105 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Space Grotesk", sans-serif;
+  
+  --color-surface: var(--surface);
+  --color-surface-container: var(--surface-container);
+  --color-surface-container-low: var(--surface-container-low);
+  --color-surface-container-high: var(--surface-container-high);
+  
+  --color-primary: #E63946;
+  --color-primary-dark: #C1121F;
+  --color-primary-deep: #8B0000;
+  
+  --color-on-surface: var(--on-surface);
+  --color-on-surface-variant: var(--on-surface-variant);
+}
+
+:root {
+  --surface: #0D0D0D;
+  --surface-container: #111111;
+  --surface-container-low: #0D0D0D;
+  --surface-container-high: #1A1A1A;
+  --on-surface: #FFFFFF;
+  --on-surface-variant: #9CA3AF;
+}
+
+html.light {
+  --surface: #FFFFFF;
+  --surface-container: #FAFAFA;
+  --surface-container-low: #FFFFFF;
+  --surface-container-high: #F3F4F6;
+  --on-surface: #111111;
+  --on-surface-variant: #6B7280;
+}
+
+@layer base {
+  body {
+    @apply bg-surface text-on-surface transition-colors duration-300 font-sans overflow-x-hidden;
+  }
+
+  @media (hover: hover) and (pointer: fine) {
+    body {
+      cursor: none;
+    }
+    a, button, [role="button"] {
+      cursor: none;
+    }
+  }
+}
+
+@layer components {
+  .glass-card {
+    @apply backdrop-blur-xl border transition-all duration-500;
+    background-color: rgba(255, 255, 255, 0.03);
+    border-color: rgba(255, 255, 255, 0.08);
+  }
+  
+  .glass-card:hover {
+    @apply border-primary/40 translate-y-[-8px];
+    box-shadow: 0 20px 40px rgba(230, 57, 70, 0.15);
+  }
+
+  .glass-card-red {
+    @apply backdrop-blur-xl border transition-all duration-500;
+    background-color: rgba(230, 57, 70, 0.05);
+    border-color: rgba(230, 57, 70, 0.1);
+  }
+
+  .nav-link {
+    @apply relative text-white/60 text-sm font-bold uppercase tracking-widest hover:text-white transition-colors;
+  }
+
+  .nav-link::after {
+    content: '';
+    @apply absolute -bottom-1 left-0 w-0 h-0.5 bg-primary transition-all duration-300;
+  }
+
+  .nav-link:hover::after {
+    @apply w-full;
+  }
+
+  .hero-gradient {
+    background: radial-gradient(circle at top left, #E63946 0%, #C1121F 50%, #8B0000 100%);
+  }
+
+  .accent-underline {
+    @apply relative inline-block;
+  }
+
+  .accent-underline::after {
+    content: '';
+    @apply absolute -bottom-1 left-0 w-full h-1 bg-primary scale-x-100 origin-left;
+  }
+
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+  .no-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+}
