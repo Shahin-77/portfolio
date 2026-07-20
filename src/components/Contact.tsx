@@ -11,7 +11,7 @@ import FadeIn from './FadeIn';
 import { personalInfo } from '../data';
 
 // EmailJS configuration — see SETUP_EMAILJS.md for how to get these 3 values.
-const EMAILJS_SERVICE_ID = 'service_x5vk7m3';
+const EMAILJS_SERVICE_ID = 'service_0pbtovt';
 const EMAILJS_TEMPLATE_ID = 'template_r0qyf8s';
 const EMAILJS_PUBLIC_KEY = '5knE5an0m4a_dd7FR';
 
