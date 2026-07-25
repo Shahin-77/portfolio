@@ -134,7 +134,7 @@ export default function Contact() {
               <FadeIn delay={0.3}>
                 <a
                   className="flex items-center gap-6 group w-fit"
-                  href={personalInfo.cvUrl}
+                  href={`${personalInfo.cvUrl}#toolbar=0`}
                   target="_blank"
                   rel="noopener noreferrer"
                 >
