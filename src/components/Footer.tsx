@@ -38,14 +38,17 @@ export default function Footer() {
                   <social.icon className="w-6 h-6 group-hover:scale-110 transition-transform" />
                 </a>
               ))}
-              <a 
-                className="px-8 h-14 rounded-2xl bg-white text-black border border-white flex items-center justify-center gap-3 hover:bg-primary hover:border-primary hover:text-white transition-all duration-500 group font-black text-xs uppercase tracking-widest" 
-                href={personalInfo.resumeUrl}
-                download="A_Mohammed_Shahin_Resume.pdf"
-              >
-                <FileText className="w-5 h-5" />
-                Resume
-              </a>
+             <div className="flex flex-col items-center gap-2">
+                <a 
+                  className="px-8 h-14 rounded-2xl bg-white text-black border border-white flex items-center justify-center gap-3 hover:bg-primary hover:border-primary hover:text-white transition-all duration-500 group font-black text-xs uppercase tracking-widest" 
+                  href={personalInfo.resumeUrl}
+                  download="A_Mohammed_Shahin_Resume.pdf"
+                >
+                  <FileText className="w-5 h-5" />
+                  Resume
+                </a>
+                <p className="text-white/40 text-[10px] font-bold uppercase tracking-widest">Click to download</p>
+              </div>
             </div>
             <div className="w-24 h-1 bg-primary rounded-full shadow-[0_0_10px_#E63946]" />
           </div>
