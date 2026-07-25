@@ -18,6 +18,7 @@ export const personalInfo = {
   linkedin: 'https://linkedin.com/in/shahin786',
   leetcode: 'https://leetcode.com/u/shahin_786/',
   resumeUrl: '/resume.pdf',
+  cvUrl: '/cv.pdf',
 };
 
 export const aboutMe = "I'm a Computer Science Engineering student who learns best by building. Over the past year, I've worked across the MERN stack — designing REST APIs, implementing JWT authentication, and optimizing database operations for applications used by real people. My internship experience at Prodigy InfoTech and a MERN Stack training and internship program at Revamp Academy gave me hands-on exposure to production workflows, from Git collaboration to performance optimization. I care about writing code that's not just functional but maintainable — clean architecture, sensible data structures, and APIs that scale. Right now, I'm building AgriSmart, an AI-driven agriculture platform, while sharpening my problem-solving skills through DSA practice. I'm looking for opportunities where I can keep learning fast and contribute to meaningful engineering work.";
