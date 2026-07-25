@@ -4,7 +4,7 @@
  */
 
 import React, { useState } from 'react';
-import { Mail, MapPin, Send, Phone, Check } from 'lucide-react';
+import { Mail, MapPin, Send, Phone, Check, FileText } from 'lucide-react';
 import { motion, AnimatePresence } from 'motion/react';
 import emailjs from '@emailjs/browser';
 import FadeIn from './FadeIn';
@@ -132,6 +132,24 @@ export default function Contact() {
               </FadeIn>
 
               <FadeIn delay={0.3}>
+                <a
+                  className="flex items-center gap-6 group w-fit"
+                  href={personalInfo.cvUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <div className="w-16 h-16 rounded-2xl bg-white/5 border border-white/10 flex items-center justify-center group-hover:bg-primary group-hover:border-primary transition-all duration-500 relative overflow-hidden">
+                    <FileText className="text-primary group-hover:text-white w-6 h-6 transition-colors relative z-10" />
+                    <div className="absolute inset-0 bg-primary translate-y-full group-hover:translate-y-0 transition-transform duration-500" />
+                  </div>
+                  <div>
+                    <p className="text-[10px] font-black text-white/20 uppercase tracking-[0.2em] mb-1">Personal Details</p>
+                    <p className="text-[10px] font-bold text-white/40 group-hover:text-primary transition-colors uppercase tracking-widest">Click to view</p>
+                  </div>
+                </a>
+              </FadeIn>
+
+              <FadeIn delay={0.4}>
                 <div className="flex items-center gap-6">
                   <div className="w-16 h-16 rounded-2xl bg-white/5 border border-white/10 flex items-center justify-center">
                     <MapPin className="text-primary w-6 h-6" />
@@ -145,7 +163,7 @@ export default function Contact() {
             </div>
           </div>
 
-          <FadeIn delay={0.4}>
+          <FadeIn delay={0.5}>
             <div className="glass-card-red p-12 md:p-16 rounded-[3rem] border-white/10 relative overflow-hidden bg-primary/5">
               <form onSubmit={handleSubmit} className="space-y-12 relative z-10">
                 <div className="group relative">
