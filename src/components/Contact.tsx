@@ -143,7 +143,7 @@ export default function Contact() {
                     <div className="absolute inset-0 bg-primary translate-y-full group-hover:translate-y-0 transition-transform duration-500" />
                   </div>
                   <div>
-                    <p className="text-[10px] font-black text-white/20 uppercase tracking-[0.2em] mb-1">Personal Details</p>
+                    <p className="text-xl font-black text-white group-hover:text-primary transition-colors tracking-tight font-display">Personal Details</p>
                     <p className="text-[10px] font-bold text-white/40 group-hover:text-primary transition-colors uppercase tracking-widest">Click to view</p>
                   </div>
                 </a>
